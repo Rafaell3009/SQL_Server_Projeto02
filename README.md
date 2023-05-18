@@ -1,1 +1,1 @@
-# SQL_Server_Projeto02
+# Neste projeto respondo várias simulações de requisição de mineração, tratamento, refinamento de dados no dia dia de trabalho para fututros insights usando comandos do SQL Server.
