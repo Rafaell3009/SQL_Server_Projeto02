@@ -1,0 +1,6 @@
+--- COUNT---
+--- EXERCICIO 01 ---
+--- QUANTOS PRODUTOS TEMOS CADASTRADOS EM NOSSA TABELA DE PRODUTOS (prooduction.product) ---
+
+SELECT COUNT(*)
+FROM Production.Product

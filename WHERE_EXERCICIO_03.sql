@@ -1,0 +1,10 @@
+/****** UM USUARIO CHAMADO PETER KREBS ESTA DEVENDO UM PAGAMENTO, CONSIGA O EMAIL DELE PARA QUE 
+POSSAMOS ENVIAR UMA COBRANÇA   ******/
+
+SELECT  *
+FROM Person.Person
+WHERE FirstName = 'Peter' and LastName = 'Krebs'
+
+SELECT *
+FROM Person.EmailAddress
+WHERE BusinessEntityID = 26

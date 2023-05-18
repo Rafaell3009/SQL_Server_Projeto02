@@ -1,0 +1,9 @@
+/****** A EQUIPE DE PRODUTOS PRECISA DO NOME DE TODAS AS PEÇAS QUE PESAM MAIS DE 500KG MAS NÃO MAIS 
+QUE 750KG PARA INSPEÇÃO   ******/
+
+SELECT Name
+FROM Production.Product
+WHERE Weight >= 500 and Weight <= 750
+
+
+

@@ -1,0 +1,13 @@
+--- DESAFIO 06 ---
+--- QUANTOS PRODUTOS CADASTRADOS TEM A PALAVRA 'road' NO NOME DELES? ---
+
+SELECT COUNT(*)
+FROM Production.Product
+WHERE Name LIKE '%road%'
+
+
+--- OU POSSO FAZER O SEGUINTE COMANDO ---
+
+SELECT Name
+FROM Production.Product
+WHERE Name LIKE '%road%'

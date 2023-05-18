@@ -1,0 +1,27 @@
+---  COMANDO STRING ---
+
+
+-- CONCAT (CONCATENAÇÃO PARA JUNTAR INFORMAÇÃO)--
+SELECT CONCAT(Firstname,' ', LastName)
+FROM  Person.Person
+
+
+-- UPPER (DEIXAR TODAS AS INFORMAÇÕES COM LETRA MAIÚSCULA)--
+-- LOWER (DEIXAR TODAS AS INFORMAÇÕES COM LETRA MINÚSCULA)--
+SELECT UPPER(Firstname), LOWER(Firstname)
+FROM  Person.Person
+
+
+--  LEN (CONTAR QUANTAS LETRAS TEM A PALAVRA(STRING)) --
+SELECT Firstname, LEN(Firstname)
+FROM  Person.Person
+
+
+--  SUBSTRING (TIRAR UM PEDAÇO DE UMA STRING)) --
+SELECT Firstname, SUBSTRING(Firstname, 1, 3)
+FROM  Person.Person
+
+
+--  REPLACE (SUBSTITUIR ALGO POR OUTRA COISA)) --
+SELECT ProductNumber, REPLACE(ProductNumber, '-', '#') 
+FROM  Production.Product

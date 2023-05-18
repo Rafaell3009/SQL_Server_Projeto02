@@ -1,0 +1,40 @@
+--- AULA GROUP BY ---
+
+--- BASICAMENTE ELE DIVIDE O RESULTADO DA SUA PESQUISA EM GRUPOS ---
+--- PARA CADA GRUPO VOCÊ PODE APLICAR UMA FUNÇÃO DE AGREGAÇÃO, POR EXEMPLO: ---
+-- calcular a soma de intes --
+--  contar o numero de itens naquele grupo --
+
+--- SINTAXE PARA O USO: ---
+-- SELECT coluna1, FunçãoAgregação(coluna2) --
+-- FROM NomeTabela --
+-- GROUP BY coluna1 --
+
+--- EXEMPLOS 01 ---
+--- SEPARE E FAÇA A SOMA DO TOTAL DO VALOR UNITARIO (UnitPrice) DE CADA OFERTA ESPECIAL (SpecialOfferID) 
+
+SELECT SpecialOfferID, SUM(UnitPrice) AS SOMA_GROUP_BY
+FROM Sales.SalesOrderDetail
+GROUP BY SpecialOfferID
+
+--- EXEMPLO 02 ---
+--- FORNEÇA OS DADOS DE QUANTO CADA PRODUTO FOI VENDIDO ATÉ HOJE ---
+
+SELECT ProductID, COUNT(ProductID) AS CONTAGEM_CADA_PRODUTO_GROUP_BY
+FROM Sales.SalesOrderDetail
+GROUP BY  ProductID
+
+--- EXEMPLO 03 ---
+--- QUERO SABER QUANTOS NOMES DE CADA NOME TEMOS CADASTRADOS EM NOSSO BANCO DE DADOS ---
+
+SELECT FirstName, COUNT(FirstName) AS "CONTAGEM DE NOMES GROUP BY"
+FROM Person.Person
+GROUP BY FirstName
+
+--- EXEMPLO 04 ---
+--- NA TABELA Production.Product  EU QUERO SABER A MÉDIA DE PREÇO PARA OS PRODUTOS QUE SÃO PRATA (silver) ---
+
+SELECT Color, AVG(ListPrice) AS "MEDIA DE PREÇOS PRODUTOS SILVER GROUP BY"
+FROM Production.Product
+WHERE Color = 'Silver'
+GROUP BY Color
